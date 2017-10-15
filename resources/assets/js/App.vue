@@ -1,3 +1,4 @@
+
 <template>
   <v-app dark>
     <v-navigation-drawer permanent :mini-variant="miniVariant" :clipped="clipped" v-model="drawer" enable-resize-watcher>
@@ -36,8 +37,6 @@
 <script>
 import Vue from 'vue'
 import router from './router/index.js'
-
-
 export default {
   data:() => ({
       clipped: true,
@@ -49,28 +48,34 @@ export default {
           title: 'Home', 
           to: '/#/home', 
           router: true 
+        },
+        { 
+          icon: 'mail', 
+          title: 'Contact', 
+          to: '/#/contact', 
+          router: true 
+        },
+        { 
+          icon: 'info', 
+          title: 'About', 
+          to: '/#/about', 
+          router: true 
         }
         //Add more options to the navigation drawer here
       ],
-      miniVariant: false,
+      miniVariant: true,
       right: true,
       rightDrawer: false,
       title: 'Vue Boilerplate',
       errors: []
     }),
-
     //Any methods you need for the base App go here
     methods: {
-
     },
-
     //Any hook methods for the Vue application go here i.e. beforeCreate() {}
-
   }
-
 </script>
 
 <style lang="stylus">
   @import './stylus/main'
 </style>
-
